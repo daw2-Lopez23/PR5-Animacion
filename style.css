@@ -1,0 +1,84 @@
+header, footer {
+    height: 300px;
+    background-color: #246aec;
+    border: 1px solid #000;
+    position: relative;
+}
+
+img{
+    width: 300px; height: 300px;
+}
+
+main{
+    height: 300px;
+}
+
+.tarjeta {
+    height: 300px;
+    width: 300px;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    right: 20px;
+    transition: all 0.3s ease-in-out;
+    perspective: 1000px;
+    opacity: 0%;
+    transform: rotate(-20deg);
+}
+
+footer:hover .tarjeta{
+    bottom: 250px;
+    transition: all 0.7s ease-in-out;
+    animation: aparicion 0.7s forwards;
+}
+
+
+.tarjeta:hover img{
+    content: url("imagenes/Blitzcrank.png");
+    animation: girar 5s alternate infinite;
+
+}
+
+
+
+@keyframes girar{
+    0% {
+        transform: rotateY(0deg);
+        content: url("imagenes/Blitzcrank.png"); 
+    }
+    25% {
+        transform: rotateY(180deg);
+        content: url("imagenes/BlitzcrankR.png"); 
+    }
+    50%{
+        transform: rotateY(0deg);
+        content: url("imagenes/Blitzcrank.png"); 
+    }
+    55% {content: url("imagenes/Blitzcrank2.png");} 
+    60% {content: url("imagenes/Blitzcrank2.5.png");} 
+    65% {content: url("imagenes/Blitzcrank2.png");} 
+    70%{content: url("imagenes/Blitzcrank2.5.png");}
+    75% {content: url("imagenes/Blitzcrank2.png");} 
+    80%{content: url("imagenes/blitzcrank2.5.png");}
+    85%{content: url("imagenes/blitzcrank3.png");}
+    90%{content: url("imagenes/blitzcrank3.5.png");}
+    95%{content: url("imagenes/blitzcrank3.png");}
+    100%{content: url("imagenes/Blitzcrank3.5.png");}
+    
+}
+
+@keyframes aparicion{
+    from{
+        opacity: 0%;
+    }
+    to{
+        opacity: 100%;
+    }
+}
+
+
+
+
+
+
+
